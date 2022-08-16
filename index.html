@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari Merdeka</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/1280px-Flag_of_Indonesia.svg.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div id="video" class="video-container" hidden>
+            <video src="./video-bg.mp4" autoplay muted loop></video>
+        </div>
+        <div class="content">
+            <h1>
+                <span class="merah">Selamat Hari Kemerdekaan</span>
+            <br>
+            <span class="putih">Indonesia!</span>
+        </h1>
+        <h2>
+            <span class="merah">HUT RI Ke -</span> <span class="putih">77</span>
+        </h2>
+        <div id="flag-container">
+            <div id="tiang"></div>
+            <div id="bendera"></div>
+        </div>
+        <button id="hormat">Hormat!</button>
+    </div>
+</div>
+</body>
+<script src="./flag.js"></script>
+<script>
+    const hormat = document.getElementById('hormat');
+    const audio = new Audio('./IndonesiaRaya.mp3');
+
+    const video = document.getElementById('video');
+
+    hormat.addEventListener('click', function() {
+        audio.play();
+        video.removeAttribute('hidden');
+    });
+</script>
+</html>
